@@ -1,8 +1,6 @@
 # Insteon UART Bridge Monitor
 
-Home Assistant custom component that monitors an Insteon UART bridge (PIC32MX695F512H firmware) via its command port.
-
-Provides reachability, online status, firmware version sensors, and optional auto-reload of the Insteon integration when the PLM client disconnects.
+This is a companion integration for the [Insteon Hub v2 custom firmware](https://github.com/hlyi/insteon-hub-uart-bridge-firmware). It monitors the bridge via its command port and provides reachability, online status, firmware version sensors, and optional auto-reload of the Insteon integration when the PLM client disconnects.
 
 ## Installation (HACS)
 
