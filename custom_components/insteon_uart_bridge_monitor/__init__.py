@@ -1,5 +1,7 @@
 import asyncio
+import json
 import logging
+from pathlib import Path
 import time
 from datetime import timedelta
 
@@ -12,6 +14,15 @@ from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from homeassistant.helpers import device_registry
 import homeassistant.helpers.config_validation as cv
+
+_VERSION = None
+
+def _get_version():
+    global _VERSION
+    if _VERSION is None:
+        manifest = Path(__file__).parent / "manifest.json"
+        _VERSION = json.loads(manifest.read_text()).get("version", "unknown")
+    return _VERSION
 
 from .const import (
     DOMAIN,
@@ -69,7 +80,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         name=f"Insteon UART Bridge ({host})",
         manufacturer="YiLabs",
         model="Insteon UART Bridge",
-        sw_version="1.0",
+        sw_version=_get_version(),
     )
     dr.async_update_device(device.id, configuration_url=None)
 
