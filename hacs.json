@@ -1,0 +1,6 @@
+{
+  "name": "Insteon UART Bridge Monitor",
+  "homeassistant": "2023.8.0",
+  "render_readme": true,
+  "filename": "insteon_uart_bridge_monitor.zip"
+}
