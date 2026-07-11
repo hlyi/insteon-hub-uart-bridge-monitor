@@ -10,7 +10,9 @@ This is a companion integration for the [Insteon Hub v2 custom firmware](https:/
 
 ## Configuration
 
-Add to `configuration.yaml`:
+The integration can be fully configured through the Home Assistant UI (**Settings → Devices & Services → Add Integration → "Insteon UART Bridge Monitor"**).
+
+If you prefer manual configuration, add to `configuration.yaml`:
 
 ```yaml
 insteon_uart_bridge_monitor:
