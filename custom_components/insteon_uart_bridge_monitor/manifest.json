@@ -5,7 +5,6 @@
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/hlyi/insteon-hub-uart-bridge-monitor",
-  "integration_type": "device",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/hlyi/insteon-hub-uart-bridge-monitor/issues",
   "requirements": [],
