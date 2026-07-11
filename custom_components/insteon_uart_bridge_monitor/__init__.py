@@ -54,6 +54,7 @@ async def async_setup(hass: HomeAssistant, config: ConfigType):
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
+    hass.data.setdefault(DOMAIN, {})
     conf = {**entry.data}
 
     host = conf[CONF_HOST]
